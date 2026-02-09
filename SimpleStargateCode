@@ -1,0 +1,132 @@
+## The sketch
+
+https://editor.p5js.org/proutycaleb/sketches/ZfkgabKwB
+
+## The code
+
+let x = 50
+let y = 50
+let size = 75
+let pos;
+let vel;
+
+  
+function setup(){
+  createCanvas (400, 400)
+  
+  rectMode(CENTER)
+  
+  pos0 = createVector(50, 50);
+  vel0 = createVector(1, 1);
+  
+  pos1 = createVector(350, 50);
+  vel1 = createVector(-1, 1);
+  
+  pos2 = createVector(350, 350);
+  vel2 = createVector(-1, -1);
+  
+  pos3 = createVector(50, 350);
+  vel3 = createVector(1, -1);
+  
+  pos4 = createVector(50, 150);
+  vel4 = createVector(1, 0.333);
+  
+  pos5 = createVector(50, 250);
+  vel5 = createVector(1, -0.333);
+  
+  pos6 = createVector(350, 150);
+  vel6 = createVector(-1, 0.333);
+  
+  pos7 = createVector(350, 250);
+  vel7 = createVector(-1, -0.333);
+}
+
+function draw(){
+  background(0);
+  
+  //Start Square0
+  pos0.add(vel0);
+  
+  if (pos0.y > 200) {
+     (pos0.x = 50) && (pos0.y = 50) && (size = 75);
+  }else (size += -0.5)
+  
+  square(pos0.x, pos0.y, size)
+  //End Square0
+  
+  //Start Square1
+  pos1.add(vel1);
+  
+  if (pos1.y > 200) {
+     (pos1.x = 350) && (pos1.y = 50);
+  }
+  
+  square(pos1.x, pos1.y, size)
+  //End Square1
+  
+  //Start Sqaure2
+  pos2.add(vel2);
+  
+   if (pos2.y < 200) {
+     (pos2.x = 350) && (pos2.y = 350);
+  }
+  
+  square(pos2.x, pos2.y, size)
+  //End Square2
+  
+  //Start Sqaure3
+  pos3.add(vel3);
+  
+   if (pos3.y < 200) {
+     (pos3.x = 50) && (pos3.y = 350);
+  }
+  
+  square(pos3.x, pos3.y, size)
+  //End Square3
+  
+  //Start Square4
+  pos4.add(vel4);
+  
+  if (pos4.y > 200) {
+     (pos4.x = 50) && (pos4.y = 150);
+  }
+  
+  square(pos4.x, pos4.y, size)
+  //End Square4
+  
+  //Start Sqaure5
+  pos5.add(vel5);
+  
+   if (pos5.y < 200) {
+     (pos5.x = 50) && (pos5.y = 250);
+  }
+  
+  square(pos5.x, pos5.y, size)
+  //End Square5
+  
+  //Start Square6
+  pos6.add(vel6);
+  
+  if (pos6.y > 200) {
+     (pos6.x = 350) && (pos6.y = 150);
+  }
+  
+  square(pos6.x, pos6.y, size)
+  //End Square6
+  
+  //Start Sqaure2
+  pos7.add(vel7);
+  
+   if (pos7.y < 200) {
+     (pos7.x = 350) && (pos7.y = 250);
+  }
+  
+  square(pos7.x, pos7.y, size)
+  //End Square2
+
+}
+
+
+
+
+
